@@ -1,5 +1,8 @@
 body {
   margin: 0px;
+   display: flex;
+  flex-direction: column; 
+   min-height: 100vh;   
 }
 
 .nav-img {
@@ -21,13 +24,11 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 40px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
-.firstpic {
-  height: 300px;
-  display: flex;
-  justify-content: center;
-}
+
 
 #myImg {
   border-radius: 5px;
@@ -44,7 +45,8 @@ h1 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -61,8 +63,7 @@ h1 {
   max-width: 700px;
   height: 500px;
   padding: 50px;
-      width: 400px;
-
+  width: 400px;
 }
 
 /* Caption of Modal Image */
@@ -146,19 +147,18 @@ h1 {
   align-items: center;
 }
 .btn-container {
-  padding-top: 100px;
-  width: 80px; /* gleiche Breite */
-  height: 80px; /* gleiche Höhe */
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #04aa6d;
   border: none;
   color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   margin: 4px 2px;
+  display: grid;
+  place-items: center;   /* text mittig */
+  /* padding-top: 100px; ← raus */
+  /* padding: 20px;      ← optional raus bei fixer Größe */
 }
 
 .btn-group button {
@@ -167,20 +167,10 @@ h1 {
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+
   font-size: 10px;
 }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 /* Add a background color on hover */
 .btn-group button:hover {
@@ -189,16 +179,39 @@ h1 {
 .btn-group {
   display: flex;
   align-items: center;
-  gap: 10px; /* Abstand zwischen Button und Text */
+  gap: 50px; /* zusätzlicher fixer Abstand, den du selbst steuern kannst */
   color: #ccc;
-  justify-content: center;  
+  justify-content: center;
 }
-
-.test{
+.background-pic {
   background-color: green;
 }
 
-.first-pic{
-  padding-left: 100px;
-        height: 500px;
+.gallery-img {
+  /* padding-left: 10px;  ← raus */
+  margin: 15px 10px;       /* Außenabstand statt Padding */
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  object-fit: cover;       /* schneidet statt zu verzerren */
+  display: block;          /* verhindert Inline-Gaps */
+}
+
+.img-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;           /* statt margin auf .gallery-img kannst du auch gap nutzen */
+  padding: 16px 0;
+}
+
+footer{
+  background-color: violet;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  font-size: 20px;
+  
 }

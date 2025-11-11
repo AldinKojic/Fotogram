@@ -12,35 +12,41 @@
       <img class="nav-img" src="./img/favicon.png" alt="Blume" />
       <h2>Fotogram</h2>
     </nav>
+
     <h1>My personal photo album</h1>
-    <img class="first-pic"
-      id="myImg"
-      src="./img/China-Mauer.jpg"
-      
-    />
-       <img class="first-pic"
-      id="myImg"
-      src="./img/Dhaka.jpg"
-      
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
+
+    <section class="img-container">
+    <img class="gallery-img " src="./Img2/Schaf.jpg" alt="China Mauer" />
+    <img class="gallery-img" src="./Img2/Viper-Schlange.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Wolf.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Husky.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Löwe - Kopie.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Eule.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Marienkäfer - Kopie.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Giraffe - Kopie.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/brown-bear-892232_1280.jpg" alt="Dhaka" />
+    <img class="gallery-img" src="./Img2/Schmetterling.jpg" alt="Dhaka" />
+    <img class="gallery-img " src="./Img2/Adler.jpg" alt="Dhaka" />
+    </section>
+ 
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal" aria-hidden="true">
+      <span class="close" aria-label="Schließen">&times;</span>
       <div class="img-btn">
-        <div class="test"><img class="modal-content" id="img01"</div>
-
-        <div class="btn-group">
-          <button class="btn-container">Weiter</button>
-          <span id="wichPic">1/2</span>
-          <button class="btn-container">Weiter</button>
+        <div class="background-pic">
+          <img class="modal-content" id="modalImg" alt="" />
+          <div class="btn-group">
+            <button class="btn-container btn-prev" type="button">Zurück</button>
+            <span id="whichPic">1/2</span>
+            <button class="btn-container btn-next" type="button">Weiter</button>
+          </div>
         </div>
-       
       </div>
-    </div>  
-    <button class="btn-container">Weiter</button>
+    </div>
 
-
-
-    <footer></footer>
+    <footer>hallo</footer>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
