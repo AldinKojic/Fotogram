@@ -68,3 +68,4 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevBtn.click();
   }
 });
+

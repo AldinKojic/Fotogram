@@ -1,8 +1,18 @@
 body {
   margin: 0px;
-   display: flex;
-  flex-direction: column; 
-   min-height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+nav,
+footer {
+  background: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-img {
@@ -11,8 +21,6 @@ body {
 }
 
 nav {
-  background-color: aqua;
-
   display: flex;
   align-items: center;
   gap: 30px;
@@ -28,7 +36,9 @@ h1 {
   padding-top: 30px;
 }
 
-
+span{
+      font-size: 17px;
+}
 
 #myImg {
   border-radius: 5px;
@@ -61,9 +71,9 @@ h1 {
   margin: auto;
   display: block;
   max-width: 700px;
-  height: 500px;
+  height: 300px;
   padding: 50px;
-  width: 400px;
+  width: 200px;
 }
 
 /* Caption of Modal Image */
@@ -156,25 +166,24 @@ h1 {
   font-size: 12px;
   margin: 4px 2px;
   display: grid;
-  place-items: center;   /* text mittig */
+  place-items: center; /* text mittig */
   /* padding-top: 100px; ← raus */
   /* padding: 20px;      ← optional raus bei fixer Größe */
 }
 
 .btn-group button {
-  background-color: #04aa6d; /* Green background */
+  background-color: #43a37b;
   border: 1px solid green; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
 
-  font-size: 10px;
+  font-size: 20px;
 }
-
 
 /* Add a background color on hover */
 .btn-group button:hover {
-  background-color: #3e8e41;
+  background-color: #2e7d65;
 }
 .btn-group {
   display: flex;
@@ -184,34 +193,75 @@ h1 {
   justify-content: center;
 }
 .background-pic {
-  background-color: green;
+  background-color: #2f4f4f; /* dunkles Tannengrün */
+  color: #f5f5f5; /* fast weißer Text */
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 8px;
 }
-
+.background-pic:hover {
+  color: var(--accent-2); /* leichtes Grün beim Hover */
+}
 .gallery-img {
   /* padding-left: 10px;  ← raus */
-  margin: 15px 10px;       /* Außenabstand statt Padding */
+  margin: 15px 10px; /* Außenabstand statt Padding */
   width: 200px;
   height: 200px;
   border-radius: 30px;
-  object-fit: cover;       /* schneidet statt zu verzerren */
-  display: block;          /* verhindert Inline-Gaps */
+  object-fit: cover; /* schneidet statt zu verzerren */
+  display: block; /* verhindert Inline-Gaps */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.img-container{
+.gallery-img:hover {
+  box-shadow: 0 12px 28px rgba(129, 126, 126, 0.45);
+}
+.img-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
-  gap: 16px;           /* statt margin auf .gallery-img kannst du auch gap nutzen */
+  gap: 16px; /* statt margin auf .gallery-img kannst du auch gap nutzen */
   padding: 16px 0;
 }
 
-footer{
-  background-color: violet;
+footer {
   display: flex;
   align-items: center;
-  gap: 30px;
-  padding: 10px;
-  font-size: 20px;
-  
+ 
+  margin-top: auto;                     /* entscheidend */
+  color: #fff;
+  border-bottom: 0;                      /* Footer braucht keine Bottom-Linie */
+  border-top: 1px solid rgba(255,255,255,0.06);
+  justify-content: center;
+}
+a,
+button {
+  color: var(--text);
+}
+a:hover,
+button:hover {
+  color: var(--accent);
+}
+:root {
+  --bg-1: #0b1b17; /* sehr dunkelgrün/blau */
+  --bg-2: #172a26; /* Verlauf */
+  --surface: #0f241f; /* Navbar & Footer */
+  --text: #e6f1ee; /* Primärtext */
+  --text-muted: #b7c9c4; /* Sekundärtext */
+  --accent: #caa755; /* warmes Gold (Löwe/Adler) */
+  --accent-2: #9ed67a; /* leises Waldgrün (Schaf/Giraffe neutralisieren) */
+  --danger: #c03a2b; /* Rot (Marienkäfer-Akzent) */
+}
+
+
+@media (min-width: 200px) {
+  h1 {
+    font-size: 35px;
+  }
 }
