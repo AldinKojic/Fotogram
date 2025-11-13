@@ -205,7 +205,7 @@ span{
 .background-pic:hover {
   color: var(--accent-2); /* leichtes Grün beim Hover */
 }
-.gallery-img {
+img{
   /* padding-left: 10px;  ← raus */
   margin: 15px 10px; /* Außenabstand statt Padding */
   width: 200px;
@@ -264,4 +264,8 @@ button:hover {
   h1 {
     font-size: 35px;
   }
+}
+
+img{
+  display: flex;
 }
