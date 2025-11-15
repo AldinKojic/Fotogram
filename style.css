@@ -151,84 +151,7 @@ span{
   cursor: pointer;
 }
 
-.img-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.btn-container {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #04aa6d;
-  border: none;
-  color: white;
-  font-size: 12px;
-  margin: 4px 2px;
-  display: grid;
-  place-items: center; /* text mittig */
-  /* padding-top: 100px; ← raus */
-  /* padding: 20px;      ← optional raus bei fixer Größe */
-}
 
-.btn-group button {
-  background-color: #43a37b;
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-
-  font-size: 20px;
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #2e7d65;
-}
-.btn-group {
-  display: flex;
-  align-items: center;
-  gap: 50px; /* zusätzlicher fixer Abstand, den du selbst steuern kannst */
-  color: #ccc;
-  justify-content: center;
-}
-.background-pic {
-  background-color: #2f4f4f; /* dunkles Tannengrün */
-  color: #f5f5f5; /* fast weißer Text */
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 8px;
-}
-.background-pic:hover {
-  color: var(--accent-2); /* leichtes Grün beim Hover */
-}
-img{
-  /* padding-left: 10px;  ← raus */
-  margin: 15px 10px; /* Außenabstand statt Padding */
-  width: 200px;
-  height: 200px;
-  border-radius: 30px;
-  object-fit: cover; /* schneidet statt zu verzerren */
-  display: block; /* verhindert Inline-Gaps */
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gallery-img:hover {
-  box-shadow: 0 12px 28px rgba(129, 126, 126, 0.45);
-}
-.img-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: start;
-  gap: 16px; /* statt margin auf .gallery-img kannst du auch gap nutzen */
-  padding: 16px 0;
-}
 
 footer {
   display: flex;
@@ -240,14 +163,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.06);
   justify-content: center;
 }
-a,
-button {
-  color: var(--text);
-}
-a:hover,
-button:hover {
-  color: var(--accent);
-}
+
 :root {
   --bg-1: #0b1b17; /* sehr dunkelgrün/blau */
   --bg-2: #172a26; /* Verlauf */
@@ -267,5 +183,21 @@ button:hover {
 }
 
 img{
-  display: flex;
+  /* padding-left: 10px;  ← raus */
+  margin: 15px 10px; /* Außenabstand statt Padding */
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  object-fit: cover; /* schneidet statt zu verzerren */
+  display: block; /* verhindert Inline-Gaps */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+}
+.imghey{
+  display:flex;
+    margin: 15px 10px; /* Außenabstand statt Padding */
+    flex-wrap: wrap;
+justify-content: center;
 }

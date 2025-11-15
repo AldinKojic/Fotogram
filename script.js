@@ -18,10 +18,20 @@ function showpic() {
  for (let indexPics = 0; indexPics < pics.length; indexPics++) {
   const element = pics[indexPics];
     const img = document.createElement("img");
-    img.src = element;
     
-
+    img.src = element;
     contentRef.appendChild(img);
+    
  }
+ 
 }
 showpic();
+
+
+function openDialog() {
+  const dialog = document.getElementById("dialogImage")
+  const dialogImg = document.getElementById("imageDialog")
+
+  
+}
+
