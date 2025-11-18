@@ -22,30 +22,28 @@
     <h1>My personal photo album</h1>
 
     <section class="img-container">
-      
-      <dialog id="imageDialog">
-        <img id="dialogImage" src="" alt="" />
-      </dialog>
 
-      <div  class="imghey" id="imgList"></div>
+      <div  onclick="openDialog()" class="imghey" id="imgList"></div>
     </section>
 
-    <!-- Modal -->
-    <div class="test3">
-      <div id="myModal" class="modal" aria-hidden="true">
-        <span class="close" aria-label="Schließen">&times;</span>
-        <div class="img-btn">
-          <div class="background-pic">
-            <img class="modal-content" id="modalImg" alt="" />
-            <div class="btn-group">
-              <button class="btn-container btn-prev" type="button">&lt</button>
-              <span id="whichPic">1/2</span>
-              <button class="btn-container btn-next" type="button">&gt</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+    <dialog id="myDialog">
+      <header>
+        <h2>Schaf</h2>
+      </header>
+      <section>
+      <img id="myImgDialog" src="" alt=""> 
+      </section>
+     <footer>
+      <button>Zurück</button>
+      <button>Weier</button>
+     </footer>
+
+    </dialog>
+
+
+
 
     <footer><h3>Aldin Kojic</h3></footer>
     <script src="script.js"></script>
