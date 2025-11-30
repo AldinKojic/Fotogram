@@ -28,13 +28,19 @@ for (let i = 0; i < pics.length; i++) {
   dialog += `<img src="${pics[i]}" />`;
 }
 
+
+
 document.getElementById("myImgDialog").innerHTML = dialog;
 document.getElementById("myDialog").innerHTML = dialog;
 
-
+function eachpic(){
+  
+}
 
 let dialogRef = document.getElementById("myDialog");
 let imgRef = document.getElementById("myImgDialog");
+
+
 
 function openDialog() {
   dialogRef.showModal();
