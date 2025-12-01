@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="renderImages()">
     <nav>
       <img class="nav-img" src="./img/favicon.png" alt="Blume" />
       <h2>Fotogram</h2>
@@ -22,7 +22,7 @@
 
     <section class="img-container">
 
-      <div  onclick="openDialog()" class="imghey" id="imgList"></div>
+      <div  onclick="openDialog('${pics[indexPics]}')" class="imghey" id="imgList"></div>
     </section>
 
 
@@ -32,7 +32,7 @@
         <h2>Schaf</h2>
       </header>
       <section>
-      <img id="myImgDialog" src="" alt=""> 
+   <img src="" alt="">
       </section>
      <footer>
       <button>Zurück</button>
