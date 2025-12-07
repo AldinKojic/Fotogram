@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js"></script>
   </head>
   <body onload="renderImages()">
     <nav>
@@ -21,30 +22,23 @@
     <h1>My personal photo album</h1>
 
     <section class="img-container">
-
-      <div  onclick="openDialog('${pics[indexPics]}')" class="imghey" id="imgList"></div>
+      <div class="imghey" id="imgList"></div>
     </section>
 
-
-
-    <dialog id="myDialog">
+    <dialog class="dialog-case" id="myDialog">
       <header>
-        <h2>Schaf</h2>
+        <h2 class="each-animal" id="animals-names"></h2>
       </header>
-      <section>
-   <img src="" alt="">
-      </section>
-     <footer>
-      <button>Zurück</button>
-      <button>Weier</button>
-     </footer>
-
+      <article class="dialog-pics">
+        <img id="modal-picture" alt="" />
+      </article>
+      <footer class="dialog-footer">
+        <button onclick="previousPicture()">Züruck</button>
+        <p id="site-number"></p>
+        <button onclick="nextPicture()">Weiter</button>
+      </footer>
     </dialog>
 
-
-
-
-    <footer><h3>Aldin Kojic</h3></footer>
-    <script src="script.js"></script>
+    <footer class="main-footer"><h3>Aldin Kojic</h3></footer>
   </body>
 </html>
