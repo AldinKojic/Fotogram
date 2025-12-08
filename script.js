@@ -1,4 +1,4 @@
-let pics = [
+const pics = [
   "./Img2/Schaf.jpg",
   "./Img2/Viper-Schlange.jpg",
   "./Img2/Wolf.jpg",
@@ -10,6 +10,7 @@ let pics = [
   "./Img2/brown-bear-892232_1280.jpg",
   "./Img2/Schmetterling.jpg",
 ];
+
 const altPics =[
   "Schafsherde",
   "Schlange auf einem Ast",
@@ -21,10 +22,11 @@ const altPics =[
   "Giraffe",
   "Braunbär",
   "Schmetterling",
-]
+] 
+
 let currentIndex = 0;
 
-let animalNames = [
+const animalNames = [
   "Schaf",
   "Schlange",
   "Wolf",
@@ -56,7 +58,7 @@ function renderImages() {
   for (let indexPics = 0; indexPics < pics.length; indexPics++) {
     contentRef.innerHTML += imgTemplates(indexPics);
   }
-}
+};
 
 function imgTemplates(indexPics) {
   return `
@@ -64,7 +66,9 @@ function imgTemplates(indexPics) {
       <img class="gallery-img" src="${pics[indexPics]}" alt="${altPics[indexPics]}"/>
     </button>
   `;
-}
+};
+
+
 function openDialog(indexPics) {
   const dialogRef = document.getElementById("dialog-photo");
   dialogRef.showModal();
@@ -75,7 +79,8 @@ function openDialog(indexPics) {
   animalRef.innerHTML = animalNames[currentIndex];
   const numbersRef = document.getElementById("dialog-index");
   numbersRef.innerHTML = numbers[currentIndex];
-}
+};
+
 
 function nextPicture() {
   const modalPicture = document.getElementById("dialog-image-src");
@@ -87,7 +92,8 @@ function nextPicture() {
   modalPicture.src = pics[currentIndex];
   animalRef.innerHTML = animalNames[currentIndex];
   numbersRef.innerHTML = numbers[currentIndex];
-}
+};
+
 
 function previousPicture() {
   const modalPicture = document.getElementById("dialog-image-src");
@@ -99,13 +105,15 @@ function previousPicture() {
   modalPicture.src = pics[currentIndex];
   animalRef.innerHTML = animalNames[currentIndex];
   numbersRef.innerHTML = numbers[currentIndex];
-}
+};
+
 
 function closeDialog() {
   const closeRef = document.getElementById("dialog-photo");
   closeRef.close();
-}
+};
+
 
 function prevBubbiling(event) {
   event.stopPropagation(event);
-}
+};

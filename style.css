@@ -104,7 +104,8 @@ h1 {
   justify-content: center;
 }
 .dialog-image {
-  height: auto;
+height: 500px;
+object-fit: cover;
   width: 300px;
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.35),
@@ -188,28 +189,15 @@ h1 {
   }
 }
 
+
+  
 @media (max-width: 340px){
   h1 {
     font-size: 20px;
   }
-}
-@media (max-width: 500px){ 
-  .photo-dialog{
-    width: 300px;
-  
-}
-.dialog-image {
-    width: 200px;
-   
-} 
-}
-@media (max-width: 400px){ 
-.photo-dialog{
-    width: 200px;
+  .dialog-image{height: 500px;}
  
 }
 
-.dialog-controls{ 
-    gap: 30px;
-    }
-  }
+
+  
