@@ -10,6 +10,18 @@ let pics = [
   "./Img2/brown-bear-892232_1280.jpg",
   "./Img2/Schmetterling.jpg",
 ];
+const altPics =[
+  "Schafsherde",
+  "Schlange auf einem Ast",
+  "Wolf",
+  "Husky",
+  "Löwe",
+  "Eule",
+  "Marienkäfer",
+  "Giraffe",
+  "Braunbär",
+  "Schmetterling",
+]
 let currentIndex = 0;
 
 let animalNames = [
@@ -47,12 +59,12 @@ function renderImages() {
 }
 
 function imgTemplates(indexPics) {
-  return `<img class="gallery-img "
-  src="${pics[indexPics]} "
-  onclick="openDialog(${indexPics})"
-  />`;
+  return `
+    <button onclick="openDialog(${indexPics})" class="img-btn">
+      <img class="gallery-img" src="${pics[indexPics]}" alt="${altPics[indexPics]}"/>
+    </button>
+  `;
 }
-
 function openDialog(indexPics) {
   const dialogRef = document.getElementById("dialog-photo");
   dialogRef.showModal();
@@ -63,18 +75,18 @@ function openDialog(indexPics) {
   animalRef.innerHTML = animalNames[currentIndex];
   const numbersRef = document.getElementById("dialog-index");
   numbersRef.innerHTML = numbers[currentIndex];
-  
 }
+
 function nextPicture() {
   const modalPicture = document.getElementById("dialog-image-src");
   const animalRef = document.getElementById("dialog-title-text");
   const numbersRef = document.getElementById("dialog-index");
   currentIndex++;
+
   if (currentIndex >= pics.length) currentIndex = 0;
   modalPicture.src = pics[currentIndex];
-  animalRef.innerHTML =   animalNames[currentIndex];
+  animalRef.innerHTML = animalNames[currentIndex];
   numbersRef.innerHTML = numbers[currentIndex];
-  
 }
 
 function previousPicture() {
@@ -82,6 +94,7 @@ function previousPicture() {
   const animalRef = document.getElementById("dialog-title-text");
   const numbersRef = document.getElementById("dialog-index");
   currentIndex--;
+
   if (currentIndex < 0) currentIndex = pics.length - 1;
   modalPicture.src = pics[currentIndex];
   animalRef.innerHTML = animalNames[currentIndex];
@@ -89,11 +102,10 @@ function previousPicture() {
 }
 
 function closeDialog() {
- const closeRef = document.getElementById("dialog-photo");
+  const closeRef = document.getElementById("dialog-photo");
   closeRef.close();
- 
 }
 
-function prevBubbiling(event){
-   event.stopPropagation(event);
+function prevBubbiling(event) {
+  event.stopPropagation(event);
 }

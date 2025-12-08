@@ -43,9 +43,9 @@ h1 {
   display: flex;
   align-items: center;
 
-  margin-top: auto; /* entscheidend */
+  margin-top: auto; 
   color: #fff;
-  border-bottom: 0; /* Footer braucht keine Bottom-Linie */
+  border-bottom: 0; 
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   justify-content: center;
   background: var(--surface);
@@ -67,14 +67,14 @@ h1 {
 
 .gallery-grid {
   display: flex;
-  margin: 15px 10px; /* Außenabstand statt Padding */
+  margin: 15px 10px; 
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .photo-dialog {
   width: 500px;
-  height: 700px;
+
   background-color: #203a34;
   color: white;
   border-radius: 15px;
@@ -104,7 +104,7 @@ h1 {
   justify-content: center;
 }
 .dialog-image {
-  height: 500px;
+  height: auto;
   width: 300px;
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.35),
@@ -119,8 +119,12 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   cursor: pointer;
 }
-
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
+}
 .gallery {
   display: flex;
   justify-content: center;
@@ -133,6 +137,7 @@ h1 {
   border-radius: 50%;
   padding: 20px;
   border: #0f241f;
+   cursor: pointer;
 }
 .dialog-btn:hover {
   background-color: #25433d;
@@ -144,12 +149,26 @@ h1 {
   border-radius: 50%;
   padding: 20px;
   border: #0f241f;
+  cursor: pointer;
 }
 
 .dialog-close-btn:hover{
   background-color: #25433d;
 }
 
+.img-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+} 
+
+.dialog-inner {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;   
+}
 @media (max-width: 600px){
    .photo-dialog {
     width: 400px;
@@ -177,20 +196,17 @@ h1 {
 @media (max-width: 500px){ 
   .photo-dialog{
     width: 300px;
-    height: 600px;
+  
 }
 .dialog-image {
     width: 200px;
-    height: 400px;
+   
 } 
 }
 @media (max-width: 400px){ 
 .photo-dialog{
     width: 200px;
-    height: 500px;
-}
-    .dialog-image{ 
-height: 300px;
+ 
 }
 
 .dialog-controls{ 
