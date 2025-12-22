@@ -79,6 +79,7 @@ function openDialog(indexPics) {
   animalRef.innerHTML = animalNames[currentIndex];
   const numbersRef = document.getElementById("dialog-index");
   numbersRef.innerHTML = numbers[currentIndex];
+  document.getElementsByTagName("body")[0].classList.add('overflow-y-hidden');
 };
 
 
@@ -111,6 +112,7 @@ function previousPicture() {
 function closeDialog() {
   const closeRef = document.getElementById("dialog-photo");
   closeRef.close();
+  document.getElementsByTagName("body")[0].classList.remove('overflow-y-hidden');
 };
 
 
