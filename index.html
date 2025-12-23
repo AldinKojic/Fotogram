@@ -15,36 +15,35 @@
     <script src="script.js"></script>
   </head>
   <body onload="renderImages()">
-    <div class="page-wrapper"> 
-   <header class="header-container">
-      <img class="header-logo" src="./img/favicon.png" alt="Logo" />
-      <h2>Fotogram</h2>
+    <header class="header-container">
+      <div class="page-wrapper">
+        <img class="header-logo" src="./img/favicon.png" alt="Logo" />
+        <h2>Fotogram</h2>
+      </div>
     </header>
     <main>
-    <h1>My personal photo album</h1>
-    <section class="gallery">
-      <div class="gallery-grid" id="gallery-list"></div>
-    </section>
+      <h1>My personal photo album</h1>
+      <section class="gallery">
+        <div class="gallery-grid" id="gallery-list"></div>
+      </section>
 
       <dialog onclick="closeDialog()" class="photo-dialog" id="dialog-photo">
-       <div class="dialog-inner"   onclick="prevBubbiling(event)"> 
-        <header  class="dialog-header">
-             <h2 class="dialog-title" id="dialog-title-text">x</h2>
-         <button class=" dialog-close-btn" onclick="closeDialog()">X</button> 
-        </header> 
-        <figure class="dialog-image-container">  
-          <img class="dialog-image" id="dialog-image-src" alt="" />
-        </figure>
-        <footer class="dialog-controls">
-          <button class="dialog-btn" onclick="previousPicture()">&lt</button>
-          <p id="dialog-index" class="dialog-index"></p>
-          <button class="dialog-btn"onclick="nextPicture()">&gt</button>
-        </footer>
+        <div class="dialog-inner" onclick="prevBubbiling(event)">
+          <header class="dialog-header">
+            <h2 class="dialog-title" id="dialog-title-text">x</h2>
+            <button class="dialog-close-btn" onclick="closeDialog()">X</button>
+          </header>
+          <figure class="dialog-image-container">
+            <img class="dialog-image" id="dialog-image-src" alt="" />
+          </figure>
+          <footer class="dialog-controls">
+            <button class="dialog-btn" onclick="previousPicture()">&lt</button>
+            <p id="dialog-index" class="dialog-index"></p>
+            <button class="dialog-btn" onclick="nextPicture()">&gt</button>
+          </footer>
         </div>
       </dialog>
     </main>
     <footer class="main-footer"><h3>Aldin Kojic</h3></footer>
-   </div>
   </body>
-
 </html>

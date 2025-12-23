@@ -17,7 +17,7 @@ const altPics =[
   "Wolf",
   "Husky",
   "Löwe",
-  "Eule",
+  "Eule", 
   "Marienkäfer",
   "Giraffe",
   "Braunbär",
@@ -79,7 +79,10 @@ function openDialog(indexPics) {
   animalRef.innerHTML = animalNames[currentIndex];
   const numbersRef = document.getElementById("dialog-index");
   numbersRef.innerHTML = numbers[currentIndex];
-  document.getElementsByTagName("body")[0].classList.add('overflow-y-hidden');
+   setTimeout(() => {
+    dialogRef.showModal();
+    document.getElementsByTagName("body")[0].classList.add('overflow-y-hidden');
+  }, 150);
 };
 
 

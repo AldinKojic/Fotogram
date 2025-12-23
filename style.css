@@ -7,8 +7,8 @@ body {
   color: var(--text);
   background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  flex-direction: column;
 }
-
 
 :root {
   --bg-1: #0b1b17;
@@ -21,25 +21,22 @@ body {
   --danger: #c03a2b;
 }
 
-
 .page-wrapper {
   width: 100%;
-  max-width: 2000px;
-  min-height: 100vh;
+  max-width: 1440px;
   display: flex;
-  flex-direction: column;
+  gap: 50px;
 }
-
 
 .header-logo {
   padding-left: 10px;
   height: 80px;
 }
 
-
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   padding: 10px;
   font-size: 20px;
@@ -48,7 +45,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-
 h1 {
   display: flex;
   justify-content: center;
@@ -56,7 +52,6 @@ h1 {
   padding-bottom: 30px;
   padding-top: 30px;
 }
-
 
 .main-footer {
   display: flex;
@@ -71,7 +66,6 @@ h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-
 .gallery-grid {
   display: flex;
   margin: 15px 10px;
@@ -79,11 +73,9 @@ h1 {
   justify-content: center;
 }
 
-
 .overflow-y-hidden {
   overflow-y: hidden;
 }
-
 
 .photo-dialog {
   width: 450px;
@@ -92,13 +84,11 @@ h1 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-
 .dialog-title {
   flex: 1;
   text-align: center;
   color: white;
 }
-
 
 .dialog-header {
   display: flex;
@@ -108,25 +98,21 @@ h1 {
   align-items: center;
 }
 
-
 .dialog-controls {
   display: flex;
   justify-content: center;
   gap: 80px;
 }
 
-
 .dialog-index {
   color: white;
 }
-
 
 .dialog-image-container {
   display: flex;
   justify-content: center;
   margin: 0px;
 }
-
 
 .dialog-image {
   height: 500px;
@@ -135,7 +121,6 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.35),
     0 2px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .gallery-img {
   margin: 15px 10px;
@@ -149,19 +134,16 @@ h1 {
   cursor: pointer;
 }
 
-
 .gallery-img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
 }
-
 
 .gallery {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
 }
-
 
 .dialog-btn {
   background-color: #2e524b;
@@ -172,11 +154,9 @@ h1 {
   cursor: pointer;
 }
 
-
 .dialog-btn:hover {
   background-color: #25433d;
 }
-
 
 .dialog-close-btn {
   background-color: #2e524b;
@@ -187,11 +167,9 @@ h1 {
   cursor: pointer;
 }
 
-
 .dialog-close-btn:hover {
   background-color: #25433d;
 }
-
 
 .img-btn {
   padding: 0;
@@ -201,37 +179,33 @@ h1 {
   cursor: pointer;
 }
 
-
 .dialog-inner {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
 }
 
-
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.8);
 }
 
-
 @media (max-width: 550px) {
+  h1 {
+    font-size: 30px;
+  }
+
   .dialog-image {
     height: 70vh;
-     width: 40vh;
+    width: 40vh;
   }
 }
-
 
 @media (max-width: 456px) {
   .photo-dialog {
     height: 100vh;
     border-radius: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
-
 
 @media (max-width: 409px) {
   .dialog-image {
@@ -239,21 +213,21 @@ dialog::backdrop {
   }
 }
 
-
 @media (max-width: 400px) {
+  h1 {
+    font-size: 25px;
+  }
   .dialog-image {
-
-        width: 340px;
+    width: 340px;
   }
 }
-
 
 @media (max-width: 380px) {
   .dialog-image {
     width: 330px;
+    height: 60vh;
   }
 }
-
 
 @media (max-width: 370px) {
   .dialog-image {
@@ -261,13 +235,14 @@ dialog::backdrop {
   }
 }
 
-
 @media (max-width: 360px) {
+  h1{
+  font-size:20px;
+}
   .dialog-image {
     width: 310px;
   }
 }
-
 
 @media (max-width: 350px) {
   .dialog-image {
@@ -276,20 +251,17 @@ dialog::backdrop {
   }
 }
 
-
 @media (max-width: 350px) {
   .dialog-image {
     width: 290px;
   }
 }
 
-
 @media (max-width: 330px) {
   .dialog-image {
     width: 280px;
   }
 }
-
 
 @media (max-width: 325px) {
   .dialog-image {
